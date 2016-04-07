@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1">
+    <title>SISTEM PENGURUSAN MAKLUMAT KONTRAK</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://oss-maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss-maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ConMan</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="desktop.html"><span class="glyphicon glyphicon-home"></span><span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kertas Pertimbangan <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="kertas_pertimbangan.html"><span class="glyphicon glyphicon-plus"></span> Baru</a></li>
+                            <li><a href="semakan_kp.html"><span class="glyphicon glyphicon-refresh"></span> Semakan</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="dokumen.html"></span> Penjualan Dokumen</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jawatankuasa <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="jk_pembuka.html"><span class="glyphicon glyphicon-plus"></span> Pembuka</a></li>
+                            <li><a href="jk_penilai.html"><span class="glyphicon glyphicon-refresh"></span> Penilai</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="melulus.html"></span> Pihak Berkuasa Melulus</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Profile</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            Selamat Datang <span class="glyphicon glyphicon-user"></span> <b>Intan</b> Login terakhir pada <b>10 Mac 2016 9:56 AM </b>
+        </div>
+
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Kertas Pertimbangan</div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombor</th>
+                        <th>Tajuk</th>
+                        <th style="width:7.5%">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>50/2015</td>
+                        <td>CADANGAN PELAWAAN SEBUT HARGA 'A' BAGI KERJA-KERJA PERKHIDMATAN PENAMBAHBAIKAN SISTEM SAP UNTUK PENGELUARN
+                            INDEN KERJA (E-INDEN)</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-kp"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-melulus-kp"><span class="glyphicon glyphicon-check"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>51/2015</td>
+                        <td>CADANGAN PELAWAAN TENDER BAGI MENYEDIA, MENGKONFIGUR, MENGUJI DAN MENTAULIAH BAGI PENINGKATAN PUSAT
+                            DATA SERTA MENYEDIAKAN PERKHIDMATAN SOKONGAN PUSAT DATA</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-kp"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-melulus-kp"><span class="glyphicon glyphicon-check"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02/2016</td>
+                        <td>CADANGAN PELAWAAN SEBUT HARGA 'B' BAGI MEREKABENTUK, MENCETAK, DAN MEMBEKAL BULETIN PUTRAJAYA UNTUK
+                            TAHUN 2016 BAGI TEMPOH ENAM BULAN</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-kp"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-melulus-kp"><span class="glyphicon glyphicon-check"></span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="panel-footer">
+                <nav>
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Tender & Sebut Harga</div>
+            <table class="table table-hover table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombor</th>
+                        <th>Tajuk</th>
+                        <th style="width:7.5%">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PPj/JK/SH(S)/85/2015</td>
+                        <td><a href="detail_tender.html">SEBUT HARGA 'A' BAGI KERJA-KERJA PERKHIDMATAN PENAMBAHBAIKAN SISTEM SAP UNTUK PENGELUARN INDEN KERJA (E-INDEN)</a></td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-sebut-harga"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-dokumen"><span class="glyphicon glyphicon-usd"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PPj/JK/T(T)/95/2015</td>
+                        <td><a href="detail_tender.html">TENDER BAGI MENYEDIA, MENGKONFIGUR, MENGUJI DAN MENTAULIAH BAGI PENINGKATAN PUSAT DATA SERTA MENYEDIAKAN PERKHIDMATAN SOKONGAN PUSAT DATA</a></td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-tender"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-dokumen"><span class="glyphicon glyphicon-usd"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PPj/JK/SH(S)/98/2015</td>
+                        <td><a href="detail_tender.html">SEBUT HARGA 'B' BAGI MEREKABENTUK, MENCETAK, DAN MEMBEKAL BULETIN PUTRAJAYA UNTUK TAHUN 2016 BAGI TEMPOH ENAM BULAN</a></td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-sebut-harga"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-dokumen"><span class="glyphicon glyphicon-usd"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PPj/JK/SH(S)/120/2015</td>
+                        <td><a href="detail_tender.html">SEBUT HARGA 'B'' BAGI PERKHIDMATAN RAKAMAN FOTOGRAFI MAJLIS PERNYAMPAIAN HADIAH PERTANDINGAN FOTOGRAFI LAMPU 2015</a></td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-sebut-harga"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-dokumen"><span class="glyphicon glyphicon-usd"></span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PPj/JK/T(T)/15/2016</td>
+                        <td><a href="detail_tender.html">TENDER PERKHIDMATAN KESELAMATAN KOMPLEKS PERBADANAN PUTRAJAYA SELAMA 3 TAHUN</a></td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target=".modal-tender"><span class="glyphicon glyphicon-open-file"></span></button>
+                            <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target=".modal-dokumen"><span class="glyphicon glyphicon-usd"></span></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="panel-footer">
+                <nav>
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- 
+            
+            Modal Kertas Pertimbangan
+            
+        -->
+        <div class="modal fade modal-kp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <textarea rows="3" readonly id="inputTajuk" class="form-control">CADANGAN PELAWAAN SEBUT HARGA 'A' BAGI KERJA-KERJA PERKHIDMATAN PENAMBAHBAIKAN SISTEM SAP UNTUK PENGELUARAN
+                            INDEN KERJA (E-INDEN)</textarea>
+                    </div>
+                    <form class="form-horizontal">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="inputNo" class="col-sm-2 control-label">Nombor</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputNo" value="50/2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTahunPerolehan" class="col-sm-2 control-label">Tahun Perolehan</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputTahunPerolehan" value="2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputRingkasan" class="col-sm-2 control-label">Ringkasan Kerja</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="3" id="inputRingkasan" readonly class="form-control">Menjalankan kerja-kerja penambahbaikan di Sistem SAP dengan mengkonfigurasi Modul e-Inden</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputJustifikasi" class="col-sm-2 control-label">Justifikasi Kerja</label>
+                                <div class="col-sm-10">
+                                    <textarea rows="3" id="inputJustifikasi" readonly class="form-control">Lorem Ipsum ...</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputKaedah" class="col-sm-2 control-label">Keadah Perolehan</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="inputKaedah" class="form-control" value="Sebut Harga" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAnggaran" class="col-sm-2 control-label">Anggaran Jabatan</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="inputAnggaran" class="form-control" value="RM250,000.00" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            
+            Modal Kelulusan Kertas Pertimbangan
+            
+        -->
+        <div class="modal fade modal-melulus-kp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form class="form-horizontal" action="desktop.html">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <textarea rows="3" readonly id="inputTajuk" class="form-control">CADANGAN PELAWAAN SEBUT HARGA 'A' BAGI KERJA-KERJA PERKHIDMATAN PENAMBAHBAIKAN SISTEM SAP UNTUK
+                                PENGELUARAN INDEN KERJA (E-INDEN)</textarea>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <label for="inputNo" class="col-sm-2 control-label">Nombor</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputNo" value="50/2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputTahunPerolehan" class="col-sm-2 control-label">Tahun Perolehan</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputTahunPerolehan" value="2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputKaedah" class="col-sm-2 control-label">Keadah Perolehan</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="inputKaedah" class="form-control" value="Sebut Harga" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputAnggaran" class="col-sm-2 control-label">Anggaran Jabatan</label>
+                                <div class="col-sm-3">
+                                    <input type="text" id="inputAnggaran" class="form-control" value="RM250,000.00" readonly>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="inputDisediakan" class="col-sm-2 control-label">Disediakan</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><input type="checkbox" checked disabled aria-label="..."></span>
+                                        <input type="text" id="inputDisediakan" class="form-control" value="Maida" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputDisemak" class="col-sm-2 control-label">Disemak</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><input type="checkbox" checked disabled aria-label="..."></span>
+                                        <input type="text" id="inputDisemak" class="form-control" value="Ahmad Faizal" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputDisahkan" class="col-sm-2 control-label">Disahkan</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
+                                        <input type="text" id="inputDisahkan" class="form-control" value="Roslan" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputDiluluskan" class="col-sm-2 control-label">Diluluskan</label>
+                                <div class="col-sm-3">
+                                    <div class="input-group date">
+                                        <input type="text" class="form-control" value="18-03-2016">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            
+            Modal Tender
+            
+        -->
+        <div class="modal fade modal-tender" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <textarea readonly class="form-control">TENDER BAGI MENYEDIA, MENGKONFIGUR, MENGUJI DAN MENTAULIAH BAGI PENINGKATAN PUSAT DATA SERTA MENYEDIAKAN
+                            PERKHIDMATAN SOKONGAN PUSAT DATA</textarea>
+                    </div>
+                    <form class="form-horizontal">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Nombor</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="PPj/JK/T(T)/95/2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Tahun Perolehan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Ringkasan Kerja</label>
+                                <div class="col-sm-10">
+                                    <textarea readonly class="form-control">Menjalankan kerja-kerja penyiapkan sebuah pusat data untuk Perbadanan Putrajaya dan perkhidmatan
+                                        sokongan selepas itu.</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Keadah Perolehan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="Tender" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Anggaran Jabatan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="RM2,500,000.00" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            
+            Modal Sebut Harga
+            
+        -->
+        <div class="modal fade modal-sebut-harga" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <textarea readonly class="form-control">SEBUT HARGA 'A' BAGI KERJA-KERJA PERKHIDMATAN PENAMBAHBAIKAN SISTEM SAP UNTUK PENGELUARN INDEN KERJA
+                            (E-INDEN)
+                        </textarea>
+                    </div>
+                    <form class="form-horizontal">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Nombor</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="PPj/JK/T(T)/95/2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Tahun Perolehan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="2015" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Ringkasan Kerja</label>
+                                <div class="col-sm-10">
+                                    <textarea readonly class="form-control">Menjalankan kerja-kerja penyiapkan sebuah pusat data untuk Perbadanan Putrajaya dan perkhidmatan
+                                        sokongan selepas itu.</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Keadah Perolehan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="Sebut Harga" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label">Anggaran Jabatan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="RM25,000.00" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer class="row">
+            <div class="col-sm-10">
+                <p>&copy; 2016 Perbadanan Putrajaya</p>
+            </div>
+            <div class="col-sm-2">
+                <img class="pull-right" src="img/logo-ppj.png" alt="Logo PPj" height="48px" />
+            </div>
+        </footer>
+    </div>
+    <!--jQuery (necessary for Bootstrap's JavaScript plugins') -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
